@@ -1,1 +1,1 @@
-var fechaUltimaActualizacion = "23/06/2025";
+var fechaUltimaActualizacion = "23/07/2025";
