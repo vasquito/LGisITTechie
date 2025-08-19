@@ -1140,7 +1140,7 @@ ul.about {
 
 @media only screen  and (max-width: 766px) {
     .widget-profil{ 	
-        height: 400px !important;
+        height: 425px !important;
         margin-bottom: 20px;
         float: none;
     }
