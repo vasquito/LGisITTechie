@@ -1,57 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Video con subtítulos desde Drive</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body class="bg-light">
-
-  <div class="container mt-5">
-    <h2 class="mb-4">Video con subtítulos desde Google Drive</h2>
-
-    <!-- Selector de idioma -->
-    <div class="mb-3">
-      <label for="selectorIdioma" class="form-label">Seleccioná idioma de subtítulos:</label>
-      <select class="form-select w-50" id="selectorIdioma">
-        <option value="1QB9bKH7h9zyUgZlzS-uB6ELgBpCC69jL" selected>Español</option>
-        <option value="1u2CH6WKUwe9DZHlxTwiUncJUXGTYXRY3">Inglés</option>
-        <option value="none">Sin subtítulos</option>
-      </select>
-    </div>
-
-    <!-- Video -->
-    <video id="miVideo" class="w-100" controls>
-      <source src="https://drive.google.com/uc?export=download&id=1g3GiQTxICpI5ur2uiwGzLPqk4edOoUfv" type="video/mp4">
-      <track id="subTrack" src="https://drive.google.com/uc?export=download&id=1QB9bKH7h9zyUgZlzS-uB6ELgBpCC69jL" kind="subtitles" srclang="es" label="Español" default>
-      Tu navegador no soporta el video.
-    </video>
-  </div>
-
-  <script>
-    $(document).ready(function () {
-      $('#selectorIdioma').on('change', function () {
-        const id = $(this).val();
-        const track = $('#subTrack')[0];
-        const video = $('#miVideo')[0];
-
-        if (id === 'none') {
-          track.src = '';
-          track.mode = 'disabled';
-        } else {
-          track.src = `https://drive.google.com/uc?export=download&id=${id}`;
-          track.mode = 'showing';
-        }
-
-        video.load(); // Recarga el video para aplicar el nuevo track
-      });
-    });
-	
-	//video, https://drive.google.com/file/d/1g3GiQTxICpI5ur2uiwGzLPqk4edOoUfv/view?usp=sharing
-	//subtitulos es, https://drive.google.com/file/d/1QB9bKH7h9zyUgZlzS-uB6ELgBpCC69jL/view?usp=drive_link
-	//subtitulos en, https://drive.google.com/file/d/1u2CH6WKUwe9DZHlxTwiUncJUXGTYXRY3/view?usp=sharing
-  </script>
-
-</body>
-</html>
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/-K9TaicxOXI"
+title="Demo técnica IA"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
